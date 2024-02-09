@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+</head>
+<body>
+  
+    <nav class="md:flex w-full text-white py-2  bg-gray-800 sticky top-0 ">
+        <div class="flex flex-wrap justify-between max-w-6xl mx-auto ">
+            <div class="">
+                <h1 class="font-bold text-3xl">ELE<span class="text-yellow-600">CARS</span></h1>
+            </div>
+            <div class="flex flex-wrap">
+                <ul class="md:flex  ml-36 max-w-6xl mx-auto ">
+                    <li class="mx-4  text-xs  cursor-pointer font-bold hover:px-4 py-2 border-b-4 border-yellow-600  ">
+                            Home</li>
+                    <li class="mx-4 text-xs  text-gray-400 cursor-pointer font-bold hover:border-b-4 border-yellow-600 px-4 py-2 text-whte font-bold "><a href="{% url 'shop' %}">Shop</a>
+                    </li>
+                    <li class="mx-4 text-xs text-gray-400  cursor-pointer font-bold hover:border-b-4 border-yellow-600 px-4 py-2">Shop details
+                    </li>
+                    <li class="mx-4 text-xs  text-gray-400 cursor-pointer font-bold hover:border-b-4 border-yellow-600 px-4 py-2"><a href="{% url 'cart' %}">Carts</a>
+                    </li>
+                    <li class="mx-4 text-xs text-gray-400  cursor-pointer font-bold hover:border-b-4 border-yellow-600 px-4 py-2">Contact Us
+                    </li>
+                    <li class="mx-4 text-xs text-gray-400  cursor-pointer font-bold hover:border-b-4 border-yellow-600 px-4 py-2"><a href="{% url 'order' %}">Orders</a>
+                    </li>
+                
+                    <a href="{% url 'login' %}"><i class="fa-solid fa-user w-12 h-6 my-2 mr-2 cursor-pointer"></i></a>
+
+
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <div class="max-w-screen-xl mx-auto bg-white p-6 rounded-lg shadow-md">
+
+      
+
+    
+        {% block content %}
+        <form action="{% url 'signup' %}" method="post" class="grid grid-cols-2 gap-6">
+            {% csrf_token %}
+
+            <div class="col-span-1 bg-cover rounded-2xl" style="background-image: url('https://static.vecteezy.com/system/resources/previews/024/576/847/non_2x/bearded-man-reading-book-serious-concentration-indoors-generated-by-ai-free-photo.jpg')">
+    
+               
+               
+            </div>
+    
+            
+            <div class="col-span-1">
+    
+               <div>
+                <h1 class="font-bold text-3xl ">Creat account</h1>
+               
+               </div>
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-600"> profile</label>
+                    <input type="file" id="name" name="profile" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+    
+               
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-600"> First name </label>
+                    <input type="text" id="email" name="First name" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-600">Last name</label>
+                    <input type="text" id="email" name="last name" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+
+
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-600">Phone</label>
+                    <input type="text" id="email" name="Phone" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
+                    <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-600"> Address</label>
+                    <input type="text" id="email" name="address" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-600">Password</label>
+                    <input type="password" id="email" name="password" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-600">Username</label>
+                    <input type="text" id="email" name="Username" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+    
+                <button class="border-2 border-gray-900 px-12  w-96 py-1 rounded hover:text-yellow-600">Sign in with Google</button>
+               
+    
+            </div>
+            {% if message in message %}
+            <div class="p-2 mb-4 text-center text-black rounded-lg bg-gray-400 w-96 te dark:bg-gray-800 dark:text-green-400"
+                role="alert" style="margin-left: 40%;">
+                <span class="font-medium"><a href="{% url 'signup' %}">{{ message }}</a></span>
+            </div>
+            {% endif %}
+    
+           
+            <div class="col-span-2">
+                <button type="submit" class="w-full bg-gray-700 text-white text-2xl p-2 rounded-md hover:bg-gray-900"><a href="{% url 'dashboard' %}">Submit</a></button>
+            </div>
+    
+        </form>
+        {% endblock %}
+    
+    </div>
+
+</body>
+</html>
+</body>
+</html>

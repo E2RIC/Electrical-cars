@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Help - Electric Cars Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <nav class="md:flex w-full text-white py-2  bg-gray-800 sticky top-0 ">
+        <div class="flex flex-wrap justify-between max-w-6xl mx-auto ">
+            <div class="">
+                <h1 class="font-bold text-3xl ml-2">Volt <span class="text-yellow-600">Market</span></h1>
+            </div>
+            <div class="flex flex-wrap">
+                <ul class="md:flex  ml-36 max-w-6xl mx-auto ">
+                    <li class="mx-4  text-xs text-white  cursor-pointer font-bold hover:px-4 py-2 border-b-4 border-yellow-600 ">
+                            <a href="{% url 'home' %}">Home</a></li>
+                    <li class="mx-4 text-xs  text-gray-400 cursor-pointer font-bold hover:border-b-4 border-yellow-600 px-4 py-2 text-whte font-bold "><a href="{% url 'shop' %}">Shop</a>
+                    </li>
+                    <li class="mx-4 text-xs text-gray-400  cursor-pointer font-bold hover:border-b-4 border-yellow-600 px-4 py-2">Shop details
+                    </li>
+                    <li class="mx-4 text-xs text-gray-400 cursor-pointer font-bold hover:border-b-4 border-yellow-600 px-4 py-2  "><a href="{% url 'cart' %}">Cart</a>
+                    </li>
+                    <li class="mx-4 text-xs text-gray-400  cursor-pointer font-bold hover:border-b-4 border-yellow-600 px-4 py-2">Contact Us
+                    </li>
+                    <li class="mx-4 text-xs text-gray-400  cursor-pointer font-bold hover:border-b-4 border-yellow-600 px-4 py-2">Chats
+                    </li>
+                   
+
+
+                </ul>
+            </div>
+           
+
+        </div>
+
+    </nav>
+   
+    <header class="bg-gray-800 text-white py-4 mt-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-2xl">Customer Help</h1>
+            <p>Our happiness team is always here to assist.</p>
+        </div>
+    </header>
+
+    
+   
+   <div class="grid grid-cols-2 gap-2">
+    <main class="container mx-auto py-8 border-2 m-4 p-2">
+        <h2 class="text-2xl font-semibold mb-4">Common Asked Questions</h2>
+
+        
+        <div class="mb-8">
+            <h1 class="text-xl font-semibold mb-2">How long does it take for me to receive my order?</h1>
+            <p class="bg-gray-700 text-white text-sm p-4 rounded">All orders are Delivered within 7-45 days, Orders with fright shipment take 7-14 days to arrive , but orders shipped by sea takes around 20-45 days. </p>
+           
+            <h1 class="text-xl font-semibold mb-2">Why are my items delayed ?</h1>
+            <p class="bg-gray-700 text-white text-sm p-4 rounded">Sometimes your items can be late and it might be because of a few of these reasons; the seller is too late to deliver package to our warehouse in the US or it’s in Peak season. However, you don’t have to worry, Voltmarket refund or places a new order for
+                 you on the 45th day. To place a new order, you can choose the same item or a different one with the same price as the first one.</p>
+
+            <h1 class="text-xl font-semibold mb-2">Do you ship to my country?</h1>
+            <p class="bg-gray-700 text-white text-sm p-4 rounded">All orders are Delivered within 7-45 days, Orders with fright shipment take 7-14 days to arrive , but orders shipped by sea takes around 20-45 days. </p>
+        </div>
+
+      
+        <div>
+            <h3 class="text-xl font-semibold mb-2">Technical Support</h3>
+            <p>If you need technical support with your electric car purchase, please contact our customer service team at <strong>Voltmarket@electriccarsonline.com</strong>.</p>
+           
+        </div>
+    </main>
+    <main class="container mx-auto py-8  border-2 m-4 p-2">
+        <h2 class="text-2xl font-semibold mb-4">Returns and Exchanges</h2>
+
+        
+        <div class="mb-8">
+            <h1 class="text-xl font-semibold mb-2">How long does it take for me to receive my order?</h1>
+            <p>All orders are Delivered within 7-45 days, Orders with fright shipment take 7-14 days to arrive , but orders shipped by sea takes around 20-45 days. </p>
+            <ul class="list-disc list-inside">
+                <li><strong>Do you charge sales tax?</strong><br> Yes all orders pay taxes but all are calculated on checkout.</li>
+                <li><strong>Do you ship to my country?</strong><br> we ship to over 20 countries worldwide, check you country at checkout.</li>
+              
+        </div>
+
+      
+        <div>
+            <h3 class="text-xl font-semibold mb-2">Technical Support</h3>
+            <p>If you need technical support with your electric car purchase, please contact our customer service team at <strong>Voltmarket@electriccarsonline.com</strong>.</p>
+           
+        </div>
+    </main>
+
+   </div>
+ 
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Electric Cars Online. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

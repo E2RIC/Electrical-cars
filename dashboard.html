@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="md:flex w-full text-white py-2  bg-gray-800 sticky top-0 ">
+        <div class="flex flex-wrap justify-between max-w-6xl mx-auto ">
+            <div class="">
+                <h1 class="font-bold text-3xl">ELE<span class="text-yellow-600">CARS</span></h1>
+            </div>
+            <div class="flex flex-wrap">
+                <ul class="md:flex  ml-36 max-w-6xl mx-auto ">
+                    <li class="mx-4  text-xs  cursor-pointer font-bold hover:px-4 py-2 border-b-4 border-yellow-600  ">
+                        <a href="{% url 'home' %}">Home</a></li>
+                    <li class="mx-4 text-xs  text-gray-400 cursor-pointer font-bold hover:border-b-4 border-yellow-600 px-4 py-2 text-whte font-bold "><a href="{% url 'shop' %}">Shop</a>
+                    </li>
+                    <li class="mx-4 text-xs text-gray-400  cursor-pointer font-bold hover:border-b-4 border-yellow-600 px-4 py-2">Shop details
+                    </li>
+                    <li class="mx-4 text-xs  text-gray-400 cursor-pointer font-bold hover:border-b-4 border-yellow-600 px-4 py-2"><a href="{% url 'cart' %}">Carts</a>
+                    </li>
+                    <li class="mx-4 text-xs text-gray-400  cursor-pointer font-bold hover:border-b-4 border-yellow-600 px-4 py-2">Contact Us
+                    </li>
+                    <li class="mx-4 text-xs text-gray-400  cursor-pointer font-bold hover:border-b-4 border-yellow-600 px-4 py-2"><a href="{% url 'order' %}">Orders</a>
+                    </li>
+                
+                    <i class="fa-solid fa-user w-12 h-6 my-2 mr-2 cursor-pointer"></i>
+
+
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+    <div class=" p-4 bg-white">
+        <div class="flex justify-between border-b-2">
+            <div class="flex flex-wrap">
+                <h1 class="mr-44 text-3xl text-blue-900 font-bold">ELE<span class="text-yellow-600">CARS</span></h1>
+                <input type="text" name="" id=""  placeholder="Search" class="border border-gray-300 w-80 px-2 rounded mb-2">
+            </div>
+            <div class="flex flex-wrap">
+                <i class="fa-regular fa-bell w-12 h-6 my-2 mr-2 cursor-pointer"></i>
+                <img src="" alt="" class="w-8 h-8 rounded">
+            </div>
+        </div>
+        <div class="flex flex-wrap mt-4">
+            <div class="bg-gray-700 text-white w-1/6 mb-12">
+                <h1 class=" m-2 w-32 p-1">Dashboard</h1>
+                <h1 class=" m-2 w-32 p-1 ">Subscriptions</h1>
+                <h1 class=" m-2 w-32 p-1 ">Recommendetion</h1>
+                <h1 class=" m-2 w-32 p-1 ">Analytics</h1>
+                <h1 class=" m-2 w-32 p-1 ">Payments</h1>
+                <div class="border-y-2">
+                    <h1 class=" m-2 w-32 p-1 ">Settings</h1>
+                    <h1 class=" m-2 w-32 p-1 ">Supports</h1>
+                </div>
+                <button class="m-2 w-32 p-1 bg-yellow-600 px-4 mt-2 ">Logout</button>
+            </div>
+            <div class="bg-gray-200 w-3/4 mb-12">
+                <h1 class="mx-4 font-bold text-blue-900 text-3xl">Dashboard</h1>
+                <div class="flex flex-wrap">
+                    <div class="w-48 bg-white m-2 rounded px-4">
+                        <h1 class="text-blue-700">7</h1>
+                        <h5 class="text-xs text-gray-600">Active subscriptions</h5>
+                    </div>
+                    <div class="w-48 bg-white m-2 rounded px-4">
+                        <h1 class="text-blue-700">1</h1>
+                        <h5 class="text-xs text-gray-600">Total Trials</h5>
+                    </div>
+                    <div class="w-48 bg-white m-2 rounded px-4">
+                        <h1 class="text-blue-700">3</h1>
+                        <h5 class="text-xs text-gray-600">Upcoming Renewals</h5>
+                    </div>
+                    <div class="w-48 bg-white m-2 rounded px-4">
+                        <h1 class="text-blue-700">2</h1>
+                        <h5 class="text-xs text-gray-600">Exipired Subscriptions</h5>
+                    </div>
+                </div>
+                <div class="flex flex-wrap m-2">
+                    <div class="w-3/5 bg-white rounded border-r-4">
+                        <div class="flex justify-between border-b-2 ">
+                            <h1 class="font-bold">Cost Analytics</h1>
+                            <div class="flex">
+                                <div class="mx-4  text-gray-500">Yearly</div>
+                                <div class="mx-4  text-gray-500">Filters</div>
+                                
+                              </div>
+                        </div>
+                        <img src="cost1.jpg" alt="" class="p-2">
+                          
+                    </div>
+
+                    <div class="w-2/5 bg-white">
+                            <div class="flex justify-between border-b-2">
+                                <h1 class="font-bold">Top Usage</h1>
+                                <div class="flex">
+                                    <div class="mx-4  text-gray-500">This Month</div>
+                                    
+                                  </div>
+                                
+                            </div>
+                            <div class="flex justify-between p-2 ">
+                                <h1 class="text-xs">Google Workspace</h1>
+                                <div class="flex">
+                                    <div class="mx-4  text-gray-500">98%</div>
+                                    
+                                  </div>
+                                
+                            </div>
+                            <div class="flex justify-between p-2 ">
+                                <h1 class="text-xs">Slack</h1>
+                                <div class="flex">
+                                    <div class="mx-4  text-gray-500">90%</div>
+                                    
+                                  </div>
+                                
+                            </div>
+                            <div class="flex justify-between p-2">
+                                <h1 class="text-xs">Jira</h1>
+                                <div class="flex">
+                                    <div class="mx-4  text-gray-500">76%</div>
+                                    
+                                  </div>
+                                
+                            </div>
+                            <div class="flex justify-between p-2">
+                                <h1 class="text-xs">HubSport</h1>
+                                <div class="flex">
+                                    <div class="mx-4  text-gray-500">64%</div>
+                                    
+                                  </div>
+                                
+                            </div>
+                           
+                    
+                    </div>
+                </div>
+                <div class="w-full bg-white p-4 m-2">
+                    <div class="flex justify-between p-2 border-b-2">
+                        <h1 class="font-bold">Upcoming Renewals</h1>
+                        <div class="flex">
+                            <div class="mx-4">View All Subscriptions</div>
+                            
+                          </div>
+                    </div>
+                    <div class="flex flex-wrap ">
+                        <div class="mr-18">
+                            <h1 class="font-bold">Software and Package Name</h1>
+                            <h6>jira</h6>
+                            <h6>HubSport</h6>
+                            <h6>Togles</h6>
+                        </div>
+                        <div class="mx-16 border-b-2">
+                            <h1 class="font-bold">Renewal Dates</h1>
+                            <h6 class="text-sm text-gray-500">30 march,2023</h6>
+                            <h6 class="text-sm text-gray-500">22 april,2023</h6>
+                            <h6 class="text-sm text-gray-500">12 june,2023</h6>
+                        </div>
+                        <div class="mr-14">
+                            <h1 class="font-bold">Renewal Cost</h1>
+                            <h5 class="text-sm text-gray-500">$150</h5>
+                            <h5 class="text-sm text-gray-500">$100</h5>
+                            <h5 class="text-sm text-gray-500">$400</h5>
+                        </div>
+                        <div class="ml-12">
+                            <h1 class="font-bold">Status</h1>
+                            <h5 class="text-sm text-gray-500">Active</h5>
+                            <h5 class="text-sm text-gray-500">Active</h5>
+                            <h5 class="text-sm text-gray-500">Trial</h5>
+                        </div>
+                          </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
